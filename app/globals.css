@@ -1,0 +1,101 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Solemm Cueros - Paleta cuero/terracota */
+  --background: oklch(0.98 0.008 60);
+  --foreground: oklch(0.18 0.03 45);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.18 0.03 45);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.18 0.03 45);
+  --primary: oklch(0.52 0.12 46);
+  --primary-foreground: oklch(0.98 0.005 60);
+  --secondary: oklch(0.93 0.02 55);
+  --secondary-foreground: oklch(0.25 0.04 45);
+  --muted: oklch(0.93 0.015 60);
+  --muted-foreground: oklch(0.5 0.04 50);
+  --accent: oklch(0.72 0.1 50);
+  --accent-foreground: oklch(0.15 0.03 45);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.985 0 0);
+  --border: oklch(0.88 0.025 55);
+  --input: oklch(0.88 0.025 55);
+  --ring: oklch(0.52 0.12 46);
+  --radius: 0.5rem;
+
+  /* Custom brand tokens */
+  --leather: oklch(0.58 0.13 46);
+  --leather-dark: oklch(0.38 0.1 42);
+  --leather-light: oklch(0.82 0.07 52);
+  --cream: oklch(0.97 0.01 65);
+}
+
+@theme inline {
+  --font-sans: var(--font-playfair), 'Georgia', serif;
+  --font-body: var(--font-lato), 'Helvetica Neue', sans-serif;
+  --font-mono: 'Courier New', monospace;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-leather: var(--leather);
+  --color-leather-dark: var(--leather-dark);
+  --color-leather-light: var(--leather-light);
+  --color-cream: var(--cream);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body), sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-sans), serif;
+  }
+}
+
+/* Embla carousel base */
+.embla {
+  overflow: hidden;
+}
+.embla__container {
+  display: flex;
+}
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+}
+
+/* Hide scrollbar utility */
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
