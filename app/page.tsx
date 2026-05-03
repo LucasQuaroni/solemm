@@ -54,7 +54,7 @@ export default function HomePage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex sm:grid sm:grid-cols-3 gap-4 sm:gap-8 overflow-x-auto snap-x snap-mandatory hide-scrollbar pb-2 sm:pb-0">
               {[
-                { text: "100% Hecho a mano", icon: ShieldCheck },
+                { text: "Productos premium", icon: ShieldCheck },
                 { text: "Envíos a todo el país", icon: Truck },
                 { text: "Atención por WhatsApp", icon: MessageCircleHeart },
               ].map((item, i) => (

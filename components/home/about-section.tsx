@@ -38,7 +38,7 @@ export default function AboutSection({ settings }: AboutSectionProps) {
 
             <div className="grid grid-cols-3 gap-6 mt-4">
               {[
-                { value: "100%", label: "Hecho a mano" },
+                { value: "Productos", label: "premium" },
                 { value: "Hecho", label: "a mano" },
                 { value: "+10", label: "Años de exp." },
               ].map((stat) => (
