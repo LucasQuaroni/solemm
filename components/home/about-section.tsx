@@ -13,7 +13,7 @@ export default function AboutSection({ settings }: AboutSectionProps) {
           {/* Image */}
           <div className="relative rounded-lg overflow-hidden aspect-[4/3] shadow-xl">
             <Image
-              src={settings.aboutImage || '/banners/banner-2.jpg'}
+              src={settings.aboutImage || "/banners/banner-2.jpg"}
               alt="Solemm Cueros - Artesanía"
               fill
               className="object-cover"
@@ -38,13 +38,17 @@ export default function AboutSection({ settings }: AboutSectionProps) {
 
             <div className="grid grid-cols-3 gap-6 mt-4">
               {[
-                { value: '100%', label: 'Cuero genuino' },
-                { value: 'Hecho', label: 'a mano' },
-                { value: '+10', label: 'Años de exp.' },
+                { value: "100%", label: "Hecho a mano" },
+                { value: "Hecho", label: "a mano" },
+                { value: "+10", label: "Años de exp." },
               ].map((stat) => (
                 <div key={stat.label} className="text-center">
-                  <p className="font-sans text-2xl font-bold text-primary">{stat.value}</p>
-                  <p className="font-body text-xs text-muted-foreground mt-1 leading-tight">{stat.label}</p>
+                  <p className="font-sans text-2xl font-bold text-primary">
+                    {stat.value}
+                  </p>
+                  <p className="font-body text-xs text-muted-foreground mt-1 leading-tight">
+                    {stat.label}
+                  </p>
                 </div>
               ))}
             </div>
@@ -59,5 +63,5 @@ export default function AboutSection({ settings }: AboutSectionProps) {
         </div>
       </div>
     </section>
-  )
+  );
 }

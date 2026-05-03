@@ -36,7 +36,7 @@ export default function HomePage() {
     <div className="min-h-screen flex flex-col">
       <Navbar />
       <main className="flex-1">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
@@ -45,7 +45,7 @@ export default function HomePage() {
           <HeroCarousel banners={banners} />
         </motion.div>
 
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
@@ -54,26 +54,28 @@ export default function HomePage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex sm:grid sm:grid-cols-3 gap-4 sm:gap-8 overflow-x-auto snap-x snap-mandatory hide-scrollbar pb-2 sm:pb-0">
               {[
-                { text: 'Cuero genuino 100%', icon: ShieldCheck },
-                { text: 'Envíos a todo el país', icon: Truck },
-                { text: 'Atención por WhatsApp', icon: MessageCircleHeart },
+                { text: "100% Hecho a mano", icon: ShieldCheck },
+                { text: "Envíos a todo el país", icon: Truck },
+                { text: "Atención por WhatsApp", icon: MessageCircleHeart },
               ].map((item, i) => (
-                <motion.div 
+                <motion.div
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.4, delay: 0.3 + (i * 0.1) }}
-                  key={item.text} 
+                  transition={{ duration: 0.4, delay: 0.3 + i * 0.1 }}
+                  key={item.text}
                   className="snap-center shrink-0 w-[85%] sm:w-auto flex items-center justify-center gap-3 bg-white/5 sm:bg-transparent border border-white/10 sm:border-transparent py-3.5 sm:py-0 px-6 rounded-2xl sm:rounded-none"
                 >
                   <item.icon className="w-5 h-5 text-cream shrink-0" />
-                  <span className="font-body text-sm font-medium tracking-wide text-cream/90">{item.text}</span>
+                  <span className="font-body text-sm font-medium tracking-wide text-cream/90">
+                    {item.text}
+                  </span>
                 </motion.div>
               ))}
             </div>
           </div>
         </motion.div>
 
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
@@ -81,8 +83,8 @@ export default function HomePage() {
         >
           <FeaturedProducts products={products} />
         </motion.div>
-        
-        <motion.div 
+
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
@@ -94,5 +96,5 @@ export default function HomePage() {
       <Footer />
       <WhatsAppButton />
     </div>
-  )
+  );
 }
